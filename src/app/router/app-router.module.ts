@@ -1,9 +1,8 @@
 import { ProjectEditComponent } from './../projects/project-edit/project-edit.component';
 import { HomeComponent } from './../home/home.component';
 import { ProjectsListComponent } from './../projects/projects-list/projects-list.component';
-import { HighlightsComponent } from './../highlights/highlights.component';
 import { UserLoginComponent } from './../accounts/user-login/user-login.component';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 

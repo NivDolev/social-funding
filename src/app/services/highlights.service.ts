@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Injectable( { providedIn: 'root' } )
 export class HighlightsService {
@@ -8,7 +9,11 @@ export class HighlightsService {
         liveProjects: 3877
     };
 
-    getInfo() {
-        return this.info;
+    getInfo(): Observable<any> {
+        return of(this.info);
+    }
+
+    addFundedProjects(): void {
+        ++this.info.fundedProjects;
     }
 }

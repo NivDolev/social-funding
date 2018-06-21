@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AppRoutingModule } from './router/app-router.module';
 import { UserLoginComponent } from './accounts/user-login/user-login.component';
-import { HighlightsComponent } from './highlights/highlights.component';
+import { HighlightsComponent } from './home/highlights/highlights.component';
 import { ProjectsListComponent } from './projects/projects-list/projects-list.component';
 import { HomeComponent } from './home/home.component';
 import { ProjectEditComponent } from './projects/project-edit/project-edit.component';

@@ -10,7 +10,7 @@
       <p class="font-weight-bold">{{ info.totalBeckers | number}}</p>
     </div>
     <div class="col-2">
-      <p class="font-weight-light">FUNDED PROJECTS</p>
+      <p class="font-weight-light">FUNDED PROJECTS<span (click)="onAddProject()">+</span></p>
       <p class="font-weight-bold">{{ info.fundedProjects | number}}</p>
       </div>
     <div class="col-2">

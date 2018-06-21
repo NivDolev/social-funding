@@ -1,0 +1,33 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+
+
+import { AppComponent } from './app.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { AppRoutingModule } from './router/app-router.module';
+import { UserLoginComponent } from './accounts/user-login/user-login.component';
+import { HighlightsComponent } from './highlights/highlights.component';
+import { ProjectsListComponent } from './projects/projects-list/projects-list.component';
+import { HomeComponent } from './home/home.component';
+import { ProjectEditComponent } from './projects/project-edit/project-edit.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    NavigationComponent,
+    UserLoginComponent,
+    HighlightsComponent,
+    ProjectsListComponent,
+    HomeComponent,
+    ProjectEditComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

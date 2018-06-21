@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <div *ngFor="let project of projectsList" class="row">
+    <div class="col-2">{{project.id}}</div>
+    <div class="col-2"><p><a routerLink=''>{{project.title}}</a></p></div>
+    <div class="col-2"><p>{{project.endDate | date}}</p></div>
+    <div class="col-2"><p>{{project.amount | currency:'USD':'symbol':'3.0-0'}}</p></div>
+    <div class="col-2"><p>{{project.category}}</p></div>
+    <div class="col-2"></div>
+  </div>
+</div>

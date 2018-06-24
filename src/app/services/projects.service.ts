@@ -7,11 +7,12 @@ import { Subject, Observable, of } from 'rxjs';
 export class ProjectsService {
     constructor() {}
 
-    getProjects(): Observable<Project[]> {
+    getProjects(category: String): Observable<Project[]> {
         return of(PROJECTS);
     }
 
     addProject(project: Project) {
         PROJECTS.push(project);
     }
+
 }

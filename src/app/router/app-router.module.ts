@@ -1,3 +1,4 @@
+import { ProjectErrorComponent } from './../projects/project-error/project-error.component';
 import { ProjectEditComponent } from './../projects/project-edit/project-edit.component';
 import { HomeComponent } from './../home/home.component';
 import { ProjectsListComponent } from './../projects/projects-list/projects-list.component';
@@ -10,8 +11,10 @@ const routes: Routes = [
     { path: '', redirectTo: 'index', pathMatch: 'full' },
     { path: 'index', component: HomeComponent },
     { path: 'login', component: UserLoginComponent },
-    { path: 'new', component: ProjectEditComponent },
-    { path: 'projects', component: ProjectsListComponent }
+    { path: 'projects', component: ProjectsListComponent},
+    { path: 'projects/new', component: ProjectEditComponent },
+    { path: ':id', component: ProjectEditComponent },
+    { path: ':id/edit', component: ProjectEditComponent },
 ];
 
 @NgModule({

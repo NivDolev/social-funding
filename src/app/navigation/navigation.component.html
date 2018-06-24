@@ -5,22 +5,29 @@
     </button>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="projects">Explore<span class="sr-only">(current)</span></a>
-        </li>
-        <li>
-          <a class="nav-link" routerLink="new">Start a project</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav" styl="float: right;">
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="index">Search</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="login">Login<span class="sr-only"></span></a>
-        </li>
-      </ul>
+      <div class="col-5">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" routerLink="projects">Explore<span class="sr-only">(current)</span></a>
+              </li>
+              <li>
+                <a class="nav-link" routerLink="projects/new">Start a project</a>
+              </li>
+            </ul>
+      </div>
+      <div class="col-2">
+        <a routerLink="index" class="nav-link"><h5>Social Funding</h5></a>
+      </div>
+      <div class="col-5">
+          <ul class="navbar-nav" style="float: right;">
+              <li class="nav-item active">
+                <a class="nav-link" routerLink="">Search</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" routerLink="login">Login<span class="sr-only"></span></a>
+              </li>
+            </ul>
+      </div>
     </div>
   </nav>
 </div>

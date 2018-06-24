@@ -19,9 +19,8 @@ export class ProjectsListComponent implements OnInit , OnDestroy {
   constructor(private projectsService: ProjectsService) { }
 
   ngOnInit() {
-    this.activateSubscription = this.projectsService.getProjects(this.selectedCategory).subscribe(
-      (projects => this.projectsList = projects)
-    );
+    this.activateSubscription = this.projectsService.getProjects(this.selectedCategory)
+    .subscribe((projects => this.projectsList = projects));
     this.getUniqueCategories();
   }
 
@@ -30,16 +29,15 @@ export class ProjectsListComponent implements OnInit , OnDestroy {
   }
 
   getUniqueCategories(): void {
-    const categories: String[] = ['All'];
+    const categories: String[] = [this.selectedCategory];
     this.projectsList.forEach(project => {
       categories.push(project.category);
     });
     this.uniqueCategories = new Set(categories);
-    console.log(this.uniqueCategories);
   }
 
   onFiltterProjectList(category: String): void {
     this.selectedCategory = category.toLowerCase();
-    console.log(this.selectedCategory);
+    this.projectsService.getProjects(this.selectedCategory);
   }
 }
